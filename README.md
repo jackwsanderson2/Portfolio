@@ -29,6 +29,16 @@ I focus on my behaviours to ensure professionalism constantly striving for impro
 
 ## Featured Projects
 
+### Sustainability Reporting - Semantic Model Example
+- Template of reporting used for statutory reporting and audits across a portfolio over 1500 products.
+- Produced reporting using sub-dimension tables and measures to calculate weights across multiple tables.
+- Front end presents mapping, field parameters and time series summaries.
+- [Sustainability Reporting](https://github.com/jackwsanderson/Portfolio/blob/main/sustainability%20reporting.pbix)
+
+**Tech:** Power BI
+  
+<img width="1194" height="655" alt="Screenshot 2026-08-01 204618" src="https://github.com/user-attachments/assets/c51c5cd7-0879-415c-916f-57274c2f37de" />
+
 ### Databricks Alert
 - Alerts will trigger if the sum of a value is 10% greater than the previous load.
 - JSON file containing SQL code.
@@ -47,17 +57,6 @@ I focus on my behaviours to ensure professionalism constantly striving for impro
 - https://github.com/jackwsanderson/Portfolio/blob/main/api_rainfall.py
 
 **Tech:** Python, API, Polars Library
-
-### Sustainability Reporting - Semantic Model Example
-- Template of reporting used for statutory reporting and audits across a portfolio over 1500 products.
-- Produced reporting using sub-dimension tables and measures to calculate weights across multiple tables.
-- Front end presents mapping, field parameters and time series summaries.
-- [Sustainability Reporting](https://github.com/jackwsanderson/Portfolio/blob/main/sustainability%20reporting.pbix)
-
-**Tech:** Power BI
-  
-<img width="1194" height="655" alt="Screenshot 2026-08-01 204618" src="https://github.com/user-attachments/assets/c51c5cd7-0879-415c-916f-57274c2f37de" />
-
 
 ### Project Financial Forecasts
 - Template of sheet used to gather financial forecasts of seven multi-million pound infrastructure projects.
