@@ -41,7 +41,8 @@ Data and analytics professional who delivers end to end data analysis and uphold
 
 **Tech:** Power BI
   
-<img width="896" height="491" alt="image" src="https://github.com/user-attachments/assets/bedd1006-95b4-4f56-937a-14df0a7e4a43" />
+<img width="1194" height="655" alt="Screenshot 2026-08-01 204618" src="https://github.com/user-attachments/assets/c51c5cd7-0879-415c-916f-57274c2f37de" />
+
 
 ### Project Financial Forecasts
 - Template of sheet used to gather financial forecasts of seven multi-million pound infrastructure projects.
