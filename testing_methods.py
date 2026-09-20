@@ -97,3 +97,75 @@ class GetRawVariables:
             notebook_path,
             "df"
         )
+
+class Checks ():
+    def __init__(self):
+        self
+
+    def case_type(tbl_name):
+        """
+        Detects case type.
+        """
+
+        tbl_name = tbl_name.replace(" ", "")
+
+        SNAKE_CASE = re.compile(r"^[a-z][a-z0-9_]*$")
+        PASCAL_CASE = re.compile(r"^[A-Z][a-zA-Z0-9]*$")
+        CAMEL_CASE = re.compile(r"^[a-z]+(?:[A-Z][a-z0-9]*)*$")
+        
+        if bool(SNAKE_CASE.match(tbl_name)) == True:
+            return 'snake_case'
+        elif bool(PASCAL_CASE.match(tbl_name)) == True:
+            return 'pascal case'
+        elif bool(CAMEL_CASE.match(tbl_name)) == True:
+            return 'camel case'
+
+    def tbl_raw_naming(tbl_name):
+        """
+        Checks variable starts with prefix 'tbl_raw_'.
+        """
+
+        prefix = 'tbl_raw_'
+        if tbl_name.startswith(prefix):
+            return True
+        else:
+            return False
+
+    def bi_number_extract(input):
+        """
+        Extracts bi number in format bi0000.
+        """
+        search_term = 'bi'
+        position = input.find(search_term)
+        bi_number = input[position:position+6]
+
+        return bi_number
+
+    def name_extract(input):
+        """
+        Extracts name of data.
+        """
+        search_term = 'bi'
+        position = input.find(search_term)
+        name = input[position+7:]
+
+        return name
+
+    def tbl_file_consistency(function,tbl_name,file_name):
+        """
+        Checks naming consistency between table and file.
+        """
+        if function((tbl_name)) == function((file_name)):
+            return True
+        else:
+            return False
+
+    def source_file_ending(source_file):
+        """
+        Checks URL link ends in '/'.
+        """
+        if source_file.endswith('/'):
+            return True
+        else:
+            return False
+
