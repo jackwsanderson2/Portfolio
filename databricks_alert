@@ -1,0 +1,55 @@
+{
+  "evaluation": {
+    "source": {
+      "name": "var_total_value",
+      "display": "var_total_value",
+      "aggregation": "AGGREGATION_UNSPECIFIED"
+    },
+    "comparison_operator": "GREATER_THAN",
+    "threshold": {
+      "column": {
+        "name": "threshold",
+        "display": "threshold",
+        "aggregation": "AGGREGATION_UNSPECIFIED"
+      }
+    },
+    "empty_result_state": "ERROR",
+    "notification": {
+      "retrigger_seconds": 1,
+      "notify_on_ok": false
+    }
+  },
+  "schedule": {
+    "quartz_cron_schedule": "43 42 15 ? * Mon",
+    "timezone_id": "Europe/London"
+  },
+  "query_lines": [
+    "WITH summary_data AS (",
+    "    SELECT",
+    "        load_id,",
+    "        COUNT(*) AS row_count,",
+    "        ROUND(SUM(value),0) AS total_value,",
+    "        ROUND(SUM(value)*0.1,0) AS threshold,",
+    "        LAG(load_id) OVER (ORDER BY load_id) AS prev_load_id,",
+    "        LAG(SUM(value)) OVER (ORDER BY load_id) AS prev_total_value",
+    "    FROM example_table,
+    "    GROUP BY load_id",
+    "    LIMIT 10",
+    ")",
+    "",
+    "SELECT",
+    "    load_id,",
+    "    row_count,",
+    "    total_value,",
+    "    threshold,",
+    "    prev_load_id,",
+    "    ROUND(prev_total_value,0) AS prev_total_value,",
+    "    load_id - prev_load_id AS var_load_id,",
+    "    ROUND(total_value - prev_total_value,0) AS var_total_value",
+    "FROM summary_data",
+    "ORDER BY load_id DESC;"
+  ],
+  "custom_description_lines": [
+    "Alert triggered because variance to the previous total value is greater than the threshold or trigger has failed to run.",
+  ]
+}
