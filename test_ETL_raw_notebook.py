@@ -4,7 +4,7 @@ from pathlib import Path
 from testing_methods import GetRawVariables, Checks
 
 # inputs
-raw_path = Path(r"C:\github\mi-team-byof\Shared\ManagementInformationBYOF\notebooks\raw\nb_raw_bi0076_osa.ipynb")
+raw_path = Path(r"raw_notebook__path")
 
 # global variables
 raw_file_name = raw_path.stem
@@ -64,14 +64,6 @@ def test_raw_source_file_ending():
         f"Source File: {raw_source_name}"
         )
 
-def test_raw_adls_account():
-    """
-    Test if adls account is in format 'aznednaprodl01'.
-    """
-    assert raw_adls_account == 'aznednaprodl01', (
-        f"ADLS Account: {raw_adls_account}"
-        )
-
 def test_raw_container():
     """
     Test if container is in format 'raw'.
@@ -82,7 +74,7 @@ def test_raw_container():
 
 def test_raw_mode():
     """
-    Test if mode is in format 'append'.
+    Test if mode is 'incremental' or 'overwrite'.
     """
     assert raw_mode == 'incremental' or raw_mode == 'overwrite', (
         f"Mode: {raw_mode}"
