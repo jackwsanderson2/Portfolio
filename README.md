@@ -43,15 +43,20 @@ Data and analytics professional who delivers end to end data analysis and uphold
   
 <img width="896" height="491" alt="image" src="https://github.com/user-attachments/assets/bedd1006-95b4-4f56-937a-14df0a7e4a43" />
 
-
-
-
 ### Project Financial Forecasts
 - Template of sheet used to gather financial forecasts of seven multi-million pound infrastructure projects.
 - Combines with 'Actuals to Date' to give 'Estimate to Completion' (ETC) and 'Estimate at Completion' (EAC).
 - [Project Financial Forecasts Excel](https://github.com/jackwsanderson/Portfolio/blob/main/project%20financial%20forecasts%20v1.xlsx) 
 
 **Tech:** Power BI, Excel Power Query
+
+### Automated Testing for ETL Pipelines using PyTest
+- The code checked naming Conventions and consistency between ETL Pipeline notebooks.
+- Enabled a standard to be set and feedback from code review was added to the scripts.
+- Sometimes, a test would fail and there would be a valid exception to the standard. The developer had to give justification for why the standard wasn't being followed.
+- This gave further quality assurance and highlighted issues which would have been difficult for a human to spot on review.
+
+**Tech:** PyTest, Python, Databricks, Visual Studio Code
 
 ### Testing Polars against Pandas
 
