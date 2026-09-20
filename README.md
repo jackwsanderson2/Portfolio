@@ -74,7 +74,6 @@ Data and analytics professional who delivers end to end data analysis and uphold
 **Tech:** Python
 
 ## Knowledge Share
-- Introduction to Business Intelligence
 - [Commericial Value of Dashboards](https://github.com/jackwsanderson/Portfolio/blob/main/commercial%20value%20of%20dashboards.pptx)
 - Storytelling in Analytics
 
