@@ -73,20 +73,6 @@ I focus on my behaviours to ensure professionalism constantly striving for impro
 
 **Tech:** PyTest, Python, Databricks, Visual Studio Code
 
-### Testing Polars against Pandas
-
-
-**Tech:** Polars, Panda, PyTest
-
-### Mortgage Forecasts
-
-**Tech:** Excel
-
-### English to Spanish Translation
-
-
-**Tech:** Python
-
 ## Knowledge Share
 - [Commericial Value of Dashboards](https://github.com/jackwsanderson/Portfolio/blob/main/commercial%20value%20of%20dashboards.pptx)
 - Storytelling in Analytics
